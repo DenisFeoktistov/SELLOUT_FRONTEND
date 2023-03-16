@@ -13,6 +13,7 @@
     "caniuse-lite": "^1.0.30001466",
     "chrome-trace-event": "^1.0.3",
     "commander": "^2.20.3",
+    "core-js": "^3.29.1",
     "electron-to-chromium": "^1.4.328",
     "enhanced-resolve": "^5.12.0",
     "es-module-lexer": "^0.9.3",
@@ -53,11 +54,19 @@
     "webpack-sources": "^3.2.3"
   },
   "devDependencies": {
-    "webpack": "^5.76.2"
+    "@babel/core": "^7.21.3",
+    "@babel/preset-env": "^7.20.2",
+    "babel-loader": "^9.1.2",
+    "clean-webpack-plugin": "^4.0.0",
+    "html-webpack-plugin": "^5.5.0",
+    "webpack": "^5.76.2",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.12.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+    "build": "webpack --mode production",
+    "dev": "webpack serve"
+  }, 
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Varushka-Sachenko/SELLOUT.git"
