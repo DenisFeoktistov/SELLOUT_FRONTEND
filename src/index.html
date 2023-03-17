@@ -6,10 +6,136 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SELLOUT</title>
 </head>
-<header>
-    <h1 class="title">SELLOUT</h1>
+<header class="header">
+    <div class="top">
+        <div class="menu">
+            <p>Women</p>
+            <p>Men</p>
+            <p>Kids</p>
+            <p>Beauty</p>
+        </div>
+        <h1 class="title">SELLOUT</h1>
+        <div class="personal">
+            <p>Личный кабинет</p>
+            <p>Избранное</p>
+            <p>Корзина</p>
+        </div>
+    </div>
+    <div class="top">
+        <div class="menu">
+            <p>20% Off</p>
+            <p>New in</p>
+            <p>Shop By</p>
+            <p>Brands</p>
+            <p>Clothing</p>
+            <p>Shoes</p>
+            <p>Trainers</p>
+        </div>
+        <form> 
+            <input type="text" name=text" class="search" placeholder"Search here!">
+            <input type="submit" name="submit" class="submit" value="Search">
+          </form>
+
+    </div>
+    
 </header>
 <body>
+    <section class="sort">
+        <p class="sort__filter">Фильтр ></p>
+        <div class="sort__list">
+            <p class="sort__element">Категория</p>
+            <p class="sort__element">Бренд</p>
+            <p class="sort__element">Размер</p>
+            <p class="sort__element">Цвет</p>
+            <p class="sort__element">Цена</p>
+        </div>
+        <p class="sort__categories">Сортировка по</p>
+    </section>
+    <section class="cardsList">
+        <div class="card">
+            <p class="card__off">20% off</p>
+            <p class="card__like">Like</p>
+            <img class="card__image">
+            <p class="card__tag">Tag</p>
+            <p class="card__brand">Brand</p>
+            <p class="card__title">Title</p>
+            <p class="card__price">Price</p>
     
+        </div>
+    </section>
+    <section class="recommend">
+        <h2 class="recommend__title">Recommendations</h2>
+        <div class="card">
+            <p class="card__off">20% off</p>
+            <p class="card__like">Like</p>
+            <img class="card__image">
+            <p class="card__tag">Tag</p>
+            <p class="card__brand">Brand</p>
+            <p class="card__title">Title</p>
+            <p class="card__price">Price</p>
+    
+        </div>
+    </section>
+    <section class="product">
+        <div>
+            <img class="product__image">
+            <p class="product__tag">Tag</p>
+            <p class="product__brand">Brand</p>
+            <p class="product__title">Title</p>
+            <p class="product__price">Price</p>
+            <input type="text" name=text" class="product__config" placeholder="Выбрать конфигурацию">
+            <button class="product__fastDeliver">Быстрая до 10 дней</button>
+            <button class="product__slowDeliver">Медленная до 30 дней</button>
+            <button class="product__addButton">Добавить в корзину</button>
+            <button class="product__likeButton">Избранное</button>
+        </div>
+        
+        <div class="product__path">
+            <p class="product__point">Men's</p>
+            <p class="product__point">Nike</p>
+            <p class="product__point">Shoes</p>
+            <p class="product__point">Smth</p>
+        </div>
+        <p class="product__brand">Brand</p>
+        <p class="priduct__title">Title</p>
+        <p class="priduct__description">Title</p>
+        <div class="product__id">
+            <h2 class="id__title">Product IDs</h2>
+            <p class="id__sellout">983092834</p>
+            <p class="id__brandStyle">0338234</p>
+        </div>
+    </section>
+    <section class="basket">
+        <h2 class="basket__title>">Корзина</h2>
+        <div class="basket__list">
+            <div class="basket__card">
+                <p class="basketCard__tag">Tag</p>
+                <p class="basketCard__brand">Brand</p>
+                <p class="basketCard__title">Title</p>
+                <p class="basketCard__price">Price</p>
+                <p class="basketCard__deliver">Доставка</p>
+                <p class="basketCard__price">Price</p>
+                <p class="basketCard__deliver">Доставка</p>
+                <p class="basketCard__size">Размер</p>
+                <p class="basketCard__amount">Количество</p>
+                <button class="product__likeButton">Избранное</button>
+                <button class="product__deleteButton">Удалить</button>
+            </div>
+        </div>
+        <div class="basket__result">
+            <h2 class="result__title">Итого:</h2>
+            <p class="result__products">Товаров на сумму:</p>
+            <p class="result__deliver">Доставка:</p>
+            <p class="result__sum">Сумма:</p>
+            <button class="result__buyButton">Оформить заказ</button>
+        </div>
+    </section>
 </body>
+<footer>
+    <h2 class="footer__title">Footer</h2>
+    <form class = "footer__form"> 
+        <input type="text" name=text" class="footer__email" placeholder="Your email adress">
+        <input type="submit" name="submit" class="footer__button" value="Sign UP">
+      </form>
+</footer>
 </html>

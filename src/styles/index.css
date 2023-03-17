@@ -1,0 +1,33 @@
+
+
+.header{
+    width: 80%;
+    margin: auto;
+}
+
+.title{ 
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 22px;
+    width: fit-content;
+}
+
+.menu{
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    height: fit-content;
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.personal{
+    display: flex;
+    height: fit-content;
+}
