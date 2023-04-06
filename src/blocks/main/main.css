@@ -36,6 +36,20 @@
     line-height: 22px;
 }
 
+.menu__element:hover{
+    white-space: nowrap;
+    margin-right: 10px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 22px;
+    background-color: silver;
+    opacity: 0.6;
+    transition: opacity .3s;
+    color: #ff6347;
+}
+
 .top{
     display: flex;
     justify-content: space-between;
@@ -47,6 +61,11 @@
     height: fit-content;
     width: 25%;
     justify-content: space-between;
+}
+
+.favourites{
+    background-image: url('../../images/favourites_unfilled.svg');
+    font-weight: bold;
 }
 
 .sort {
