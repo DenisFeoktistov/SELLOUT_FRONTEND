@@ -1,5 +1,6 @@
 import React from 'react'
 import logo from '../images/header_logo.svg';
+import heart from '../images/favourites_unfilled.svg'
 function Header() {
   return (
     <header className="header">
@@ -11,7 +12,7 @@ function Header() {
         <h1 className="title">SELLOUT</h1>
         <div className="personal">
             <p>Личный кабинет</p>
-            <img src="../images/favourites_unfilled.svg" alt="Heart Image"/>
+            <img src={heart} alt="Heart Image"/>
             <p>Корзина</p>
         </div>
     </div>
