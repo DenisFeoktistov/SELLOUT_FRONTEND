@@ -1,33 +1,32 @@
 import React from 'react'
-<<<<<<< HEAD
-import logo from '../images/header_logo.svg';
-import heart from '../images/favourites_unfilled.svg'
-=======
 import favourites_unfilled from '../images/favourites_unfilled.svg';
 import cart from '../images/cart.svg';
 import account from '../images/account.svg';
 import logo from '../images/sellout_logo.svg';
 
->>>>>>> cce6cb50efd643a80079e5a56f29755d9bbf56c6
 function Header() {
+    const [menuClassName, setMenuClassName] = React.useState("");
+    function openMenu (){
+        if (menuClassName==""){
+            setMenuClassName("menu_visible")
+        } else {
+            setMenuClassName("")
+        }
+        
+    }
   return (
     <header className="header">
     <div className="top">
-        <div className="menu">
+        <button type="button" className="header__button" src={account} alt="Личный кабинет" onClick={openMenu}></button>
+        <div className={`menu ${menuClassName}`}>
             <p className="menu__element">О нас</p>
             <p className="menu__element">Блог</p>
         </div>
         <img className="header__image__logo" src={logo} alt="SELLOUT"/>
         <div className="personal">
-<<<<<<< HEAD
-            <p>Личный кабинет</p>
-            <img src={heart} alt="Heart Image"/>
-            <p>Корзина</p>
-=======
             <img className="header__image" src={account} alt="Личный кабинет"/>
             <img className="header__image" src={favourites_unfilled} alt="Избранное"/>
             <img className="header__image header__image__cart" src={cart} alt="Корзина"/>
->>>>>>> cce6cb50efd643a80079e5a56f29755d9bbf56c6
         </div>
     </div>
     <div className="bottom">

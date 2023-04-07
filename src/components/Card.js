@@ -41,7 +41,7 @@ function Card(props) {
     return (
         <div className="card">
             <p className="card__off">20% off</p>
-            <p className="card__like">Like</p>
+            <button className="card__like" onClick={handleLikeClick}>Like</button>
             <img className="card__image" alt="Изображение товара" src={props.cardsToAdd.link}/>
             <div className="card__info">
                 <p className="card__tag">Tag</p>

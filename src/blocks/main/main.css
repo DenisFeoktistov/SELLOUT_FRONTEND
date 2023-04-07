@@ -4,6 +4,7 @@
     margin: auto;
 }
 
+
 .header__image{
     width: 25px;
     height: 25px;
@@ -60,11 +61,36 @@
     width: fit-content;
 }
 
+
+.header__button{
+    visibility: hidden;
+    width: 25px;
+    height: 25px;
+    padding: 10px;
+    border-radius: 4px;
+    
+}
+
+.menu_visible{
+    visibility: visible;
+}
 .menu{
     width: 20%;
     display: flex;
     justify-content: space-between;
     height: fit-content;
+}
+
+@media screen and (max-width: 500px){
+    .header__button{
+        visibility: visible;
+    }
+    .menu{
+        visibility: hidden;
+    }
+    .menu_visible{
+        visibility: visible;
+    }
 }
 
 .menu__element{
