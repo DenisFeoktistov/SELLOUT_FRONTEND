@@ -3,6 +3,7 @@ import favourites_unfilled from '../images/favourites_unfilled.svg';
 import cart from '../images/cart.svg';
 import account from '../images/account.svg';
 import logo from '../images/sellout_logo.svg';
+import search from '../images/search.svg';
 
 function Header() {
     const [menuClassName, setMenuClassName] = React.useState("");
@@ -42,7 +43,7 @@ function Header() {
         </div>
         <form className="header__form">
             <input type="text" name="text" className="search" placeholder="Поиск"/>
-            <input type="submit" name="submit" className="submit" value=""/>
+            <input type="image" name="submit" className="submit" src={search}/>
         </form>
     </div>
     
