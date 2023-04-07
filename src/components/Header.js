@@ -4,6 +4,7 @@ import cart from '../images/cart.svg';
 import account from '../images/account.svg';
 import logo from '../images/sellout_logo.svg';
 import search from '../images/search.svg';
+import express_shipping from '../images/express_shipping.svg'
 
 function Header() {
     const [menuClassName, setMenuClassName] = React.useState("");
@@ -22,6 +23,7 @@ function Header() {
         <div className={`menu ${menuClassName}`}>
             <p className="menu__element">О нас</p>
             <p className="menu__element">Блог</p>
+            <p className="menu__element">Связаться с нами</p>
         </div>
         <img className="header__image__logo" src={logo} alt="SELLOUT"/>
         <div className="personal">
@@ -38,8 +40,11 @@ function Header() {
             <p className="menu__element">Обувь</p>
             <p className="menu__element">Одежда</p>
             <p className="menu__element">Аксессуары</p>
-            <p className="menu__element">Мгновенная доставка</p>
-            <p className="menu__element">Скидки</p>
+            <div className="menu__element menu_shipping">
+                <p className="menu_shipping__p">Мгновенная доставка</p>
+                <img className="header__image_shipping" src={express_shipping} alt="Мгновенная доставка"/>
+            </div>
+            <p className="menu__element" style={{color: "red"}}>Скидки</p>
         </div>
         <form className="header__form">
             <input type="text" name="text" className="search" placeholder="Поиск"/>

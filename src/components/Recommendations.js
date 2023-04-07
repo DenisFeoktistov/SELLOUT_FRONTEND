@@ -19,7 +19,7 @@ function Recommendation(props) {
 
   return (
     <section className="recommend">
-      <h2 className="recommend__title">Recommendations</h2>
+      <h2 className="recommend__title">Рекомендации</h2>
       <div className="recommend__list">
         {props.cards.map((element) => {
           return (
