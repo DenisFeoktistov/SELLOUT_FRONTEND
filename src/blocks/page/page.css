@@ -1,4 +1,7 @@
 .page{
     padding-bottom: 60px;
     min-height: 100vh;
+    padding-top: 144px;
+    width: 90%;
+    margin: auto;
 }

@@ -1,7 +1,7 @@
 import React from "react";
 //import api from '../utils/api.js'
 import Card from "./Card";
-
+import { Link } from 'react-router-dom';
 import { CurrentUserContext } from "../contexts/CurrentUserContext";
 
 function Main(props) {
@@ -16,9 +16,10 @@ function Main(props) {
   const profileAvatarHoverNot = () => {
     changeStatus("");
   };
+  
 
   return (
-    <main classNameName="main">
+    <main className="main">
       {/* <section classNameName="profile">
                 <div classNameName="profile__avatar-container" onClick={props.onEditAvatar} onMouseOver={profileAvatarHover} onMouseOut={profileAvatarHoverNot}>
                     <img classNameName="profile__avatar" src={currentUser.avatar} alt="Аватар" />
@@ -32,16 +33,18 @@ function Main(props) {
                 </div>
                 <button classNameName="profile__add-button-box" type="button" onClick={props.onAddPlace}></button>
             </section> */}
-      <section classNameName="cardsList">
+      <section className="cardsList">
         {props.cards.map((element) => {
           return (
-            <Card
-              key={element._id}
-              onCardDelete={props.onCardDelete}
-              cardsToAdd={element}
-              onCardClick={props.onCardClick}
-              onCardLike={props.onCardLike}
-            />
+            <Link to="/productPage">
+              <Card
+                key={element._id}
+                onCardDelete={props.onCardDelete}
+                cardsToAdd={element}
+                onCardClick={props.onCardClick}
+                onCardLike={props.onCardLike}
+              />
+            </Link>
           );
         })}
         <div className="swap">

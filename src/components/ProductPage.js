@@ -1,21 +1,37 @@
 import React from 'react'
+import {useState, useEffect} from 'react';
 
 function ProductPage(props) {
   let statusOpened = "";
+  console.log(props)
 
-  if (props.card.name !== "") {
-    statusOpened = "popup_opened";
-  } else {
-    statusOpened = "";
-  }
+  // const [cardName, setCardName] = React.useState("");
+  // const [cardLink, setCardLink] = React.useState("");
+  // useEffect(() => {
+  //   setCardLink(100);
+  //   setCardName(100)
+  // }, []);
+  // if (props.card.name !== "") {
+  //   statusOpened = "popup_opened";
+  // } else {
+  //   statusOpened = "";
+  // }
 
-  const closePopups = props.onClose;
+  // const closePopups = props.onClose;
 
 //   const closePopupWithOverlay = (evt) => {
 //     if (evt.target === evt.currentTarget) {
 //       closePopups();
 //     }
 //   };
+// if (!props.card){
+//   setCardName("Name")
+//   setCardLink("https://images.unsplash.com/photo-1621348283934-1970ce077ff7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80")
+// } else{
+//   setCardName(props.card.name)
+//   setCardLink(props.card.link)
+
+// }
   return (
     // <div className={`popup image-popup ${statusOpened}`} onClick={closePopupWithOverlay}>
     // 	<div className="popup__container">
@@ -28,8 +44,8 @@ function ProductPage(props) {
       <div>
         <img
           className="product__image"
-          alt={props.card.name}
-          src={props.card.link}
+          alt={"Name"}
+          src={"https://images.unsplash.com/photo-1621348283934-1970ce077ff7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80"}
         />
         <p className="product__tag">Tag</p>
         <p className="product__brand">Brand</p>

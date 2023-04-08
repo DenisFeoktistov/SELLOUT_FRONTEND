@@ -48,7 +48,7 @@ function Header() {
         </div>
         <form className="header__form">
             <input type="text" name="text" className="search" placeholder="Поиск"/>
-            <input type="image" name="submit" className="submit" src={search}/>
+            <input type="image" name="submit" className="submit" src={search} alt="Кнопка поиска"/>
         </form>
     </div>
     
