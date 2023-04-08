@@ -1,7 +1,18 @@
+*{
+    font-family: Montserrat, serif;
+}
 
 .header{
-    width: 80%;
+    width: 90%;
+    top: 0;
+    left: 0;
+    right: 0;
     margin: auto;
+    font-family: Montserrat, serif;
+    font-weight: bold;
+    position: fixed;
+    background-color: white;
+    z-index: 1;
 }
 
 
@@ -10,6 +21,8 @@
     height: 25px;
     padding: 10px;
     border-radius: 4px;
+    margin-left: 40px;
+    justify-content: end;
 }
 
 .header__image:hover{
@@ -24,32 +37,46 @@
     padding: 5px;
 }
 
+
 .header__image__logo{
-    width: 100%;
+    width: fit-content;
     height: 50px;
+
 }
 
 .header__form{
-    position: relative;
-    display: inline-block;
+    text-align: center;
 }
 .search{
-    padding-right: 50px;
-    width: 200px;
+    display: inline-block;
+    vertical-align: middle;
+    border: 2px solid #ccc;
     border-radius: 4px;
-    border-color: #c6c1c1;
+    padding: 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-right: 50px;
+}
+
+.search::placeholder {
+    font-family: "Montserrat";
+    font-size: 14px;
+    font-style: italic;
+    color: #999;
+    text-indent: 5px;
 }
 
 .submit{
-    background-image: url(../../images/search.svg);
-    background-size: 25px;
-    background-repeat: no-repeat;
-    background-position: center;
-    border: none;
-    cursor: pointer;
-    height: 24px;
-    width: 24px;
-    padding: 0;
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    vertical-align: middle;
+    position: absolute;
+    margin-left: -35px;
+    margin-top: 10px;
+    opacity: 0.7;
+
 }
 
 .title{ 
@@ -68,17 +95,18 @@
     height: 25px;
     padding: 10px;
     border-radius: 4px;
-    
+    display: none;
 }
 
 .menu_visible{
     visibility: visible;
 }
 .menu{
-    width: 20%;
+    width: fit-content;
     display: flex;
     justify-content: space-between;
     height: fit-content;
+
 }
 
 @media screen and (max-width: 500px){
@@ -96,7 +124,7 @@
 .menu__element{
     white-space: nowrap;
     margin-right: 10px;
-    font-family: 'Inter';
+    font-family: 'Montserrat';
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -110,6 +138,26 @@
     opacity: 0.3;
     transition: background-color 0.5s ease;
     cursor: pointer;
+}
+
+.menu_shipping{
+    align-content: center;
+    display: flex;
+    height: 22px;
+    align-self: center;
+}
+
+.menu_shipping__p{
+    margin: 0px;
+}
+
+.header__image_shipping{
+    width: 25px;
+    height: 25px;
+}
+
+.header__image_shipping:hover{
+    opacity: 1;
 }
 
 .top{
@@ -128,7 +176,7 @@
     display: flex;
     height: fit-content;
     width: 25%;
-    justify-content: space-between;
+    justify-content: end;
     align-items: center;
 }
 
@@ -156,7 +204,9 @@
     line-height: 22px;
 }
 
-
+.main{
+    margin-top: 220px;
+}
 
 
 .cardsList{
@@ -172,13 +222,13 @@
 .card{
     min-width: 300px;
     border-radius: 4px;
-    border: 1px solid rgba(34, 34, 34, 0.2);
     position: relative;
     height: 400px;
     margin-bottom: 48px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    font-family: Montserrat, Serif;
 }
 
 .card:not(:nth-child(4n)){
@@ -191,14 +241,38 @@
     height: 400px;
     overflow: hidden;
 }
-.card__off{
+
+.card__extras{
+    display: flex;
     position: absolute;
+    left: 0;
+    margin-right: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card__extras__off{
     margin-left: 11px;
-    margin-top: 10px;
     background: #E6E6E6;
     border-radius: 4px;
-    width: 70px;
+    width: fit-content;
     text-align: center;
+    margin-right: 5px;
+    padding: 3px;
+    color: red;
+    font-size: smaller;
+}
+
+.card__extras__return{
+    width: fit-content;
+    height: 19px;
+    margin-right: 5px;
+    margin-bottom: 1px;
+}
+
+.card__extras__shipping{
+    width: fit-content;
+    height: 25px;
 }
 
 .card__like{
@@ -206,12 +280,19 @@
     right: 0;
     margin-right: 10px;
     margin-top: 10px;
-
+    background-image: url("../../images/favourites_unfilled.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    width: 23px;
+    height: 27px;
+    background-color: white;
+    cursor: pointer;
+    outline: none;
 }
 
 .card__tag{
-    font-family: 'Inter';
-    font-style: normal;
     font-weight: 400;
     font-size: 15px;
     line-height: 22px;
@@ -222,7 +303,6 @@
 
 .card__brand{
     margin: 0;
-    font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
@@ -230,7 +310,6 @@
 }
 
 .card__title{
-    font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -240,7 +319,6 @@
 
 .card__price{
     margin-bottom: 0;
-    font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 15px;

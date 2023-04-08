@@ -1,4 +1,7 @@
 import React from 'react'
+import express_shipping from '../images/express_shipping.svg'
+import product_return from '../images/product_return.svg'
+
 
 import { CurrentUserContext } from '../contexts/CurrentUserContext';
 
@@ -40,8 +43,12 @@ function Card(props) {
     //this.handleLikeClick = this.handleLikeClick.bind(this);
     return (
         <div className="card">
-            <p className="card__off">20% off</p>
-            <button className="card__like" onClick={handleLikeClick}>Like</button>
+            <div className="card__extras">
+                <p className="card__extras__off">-20%</p>
+                <img className="card__extras__return" src={product_return} alt="Доступен возврат"/>
+                <img className="card__extras__shipping" src={express_shipping} alt="Мгновенная доставка"/>
+            </div>
+            <button className="card__like" onClick={handleLikeClick}></button>
             <img className="card__image" alt="Изображение товара" src={props.cardsToAdd.link}/>
             <div className="card__info">
                 <p className="card__tag">Tag</p>
