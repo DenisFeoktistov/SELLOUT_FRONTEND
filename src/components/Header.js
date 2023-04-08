@@ -7,7 +7,7 @@ import logo from '../images/sellout_logo.svg';
 function Header() {
     const [menuClassName, setMenuClassName] = React.useState("");
     function openMenu (){
-        if (menuClassName==""){
+        if (menuClassName===""){
             setMenuClassName("menu_visible")
         } else {
             setMenuClassName("")
