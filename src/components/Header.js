@@ -21,7 +21,7 @@ function Header() {
     }
   return (
     <header className="header">
-    <div className="top">
+    <div className="header__top">
         <button type="button" className="header__button" onClick={openMenu}></button>
         <button type="button" className="header__searchButton" onClick={openSearch}></button>
         <div className={`menu ${menuClassName}`}>
@@ -36,7 +36,7 @@ function Header() {
             <img className="header__image header__image__cart" src={cart} alt="Корзина"/>
         </div>
     </div>
-    <div className="bottom">
+    <div className="header__bottom">
         <div className="menu">
             <p className="menu__element">Новинки</p>
             <p className="menu__element">Рекомендации</p>
