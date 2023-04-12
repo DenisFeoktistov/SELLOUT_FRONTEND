@@ -1,7 +1,3 @@
-
-
-
-
 class Api {
 
   constructor({ adress, token }) {

@@ -1,135 +1,5 @@
-
-.header{
-    width: 80%;
-    margin: auto;
-}
-
-
-.header__image{
-    width: 25px;
-    height: 25px;
-    padding: 10px;
-    border-radius: 4px;
-}
-
-.header__image:hover{
-    background-color: #e3e3e3;
-    transition: background-color 0.5s ease;
-    cursor: pointer;
-}
-
-.header__image__cart{
-    width: 35px;
-    height: 35px;
-    padding: 5px;
-}
-
-.header__image__logo{
-    width: 100%;
-    height: 50px;
-}
-
-.header__form{
-    position: relative;
-    display: inline-block;
-}
-.search{
-    padding-right: 50px;
-    width: 200px;
-    border-radius: 4px;
-    border-color: #c6c1c1;
-}
-
-.submit{
-    background-image: url(../../images/search.svg);
-    background-size: 25px;
-    background-repeat: no-repeat;
-    background-position: center;
-    border: none;
-    cursor: pointer;
-    height: 24px;
-    width: 24px;
-    padding: 0;
-}
-
-.title{ 
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 52px;
-    line-height: 22px;
-    width: fit-content;
-}
-
-
-.header__button{
-    visibility: hidden;
-    width: 25px;
-    height: 25px;
-    padding: 10px;
-    border-radius: 4px;
-    
-}
-
-.menu_visible{
-    visibility: visible;
-}
-.menu{
-    width: 20%;
-    display: flex;
-    justify-content: space-between;
-    height: fit-content;
-}
-
-@media screen and (max-width: 500px){
-    .header__button{
-        visibility: visible;
-    }
-    .menu{
-        visibility: hidden;
-    }
-    .menu_visible{
-        visibility: visible;
-    }
-}
-
-.menu__element{
-    white-space: nowrap;
-    margin-right: 10px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 22px;
-    padding: 10px;
-    border-radius: 4px;
-}
-
-.menu__element:hover{
-    background-color: #c6c1c1;
-    opacity: 0.3;
-    transition: background-color 0.5s ease;
-    cursor: pointer;
-}
-
-.top{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.bottom{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.personal{
-    display: flex;
-    height: fit-content;
-    width: 25%;
-    justify-content: space-between;
-    align-items: center;
+*{
+    font-family: Montserrat, serif;
 }
 
 .sort {
@@ -156,7 +26,9 @@
     line-height: 22px;
 }
 
-
+.main{
+    margin-top: 220px;
+}
 
 
 .cardsList{
@@ -172,13 +44,13 @@
 .card{
     min-width: 300px;
     border-radius: 4px;
-    border: 1px solid rgba(34, 34, 34, 0.2);
     position: relative;
     height: 400px;
     margin-bottom: 48px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    font-family: Montserrat, Serif;
 }
 
 .card:not(:nth-child(4n)){
@@ -191,14 +63,38 @@
     height: 400px;
     overflow: hidden;
 }
-.card__off{
+
+.card__extras{
+    display: flex;
     position: absolute;
+    left: 0;
+    margin-right: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.card__extras__off{
     margin-left: 11px;
-    margin-top: 10px;
     background: #E6E6E6;
     border-radius: 4px;
-    width: 70px;
+    width: fit-content;
     text-align: center;
+    margin-right: 5px;
+    padding: 3px;
+    color: red;
+    font-size: smaller;
+}
+
+.card__extras__return{
+    width: fit-content;
+    height: 19px;
+    margin-right: 5px;
+    margin-bottom: 1px;
+}
+
+.card__extras__shipping{
+    width: fit-content;
+    height: 25px;
 }
 
 .card__like{
@@ -206,12 +102,19 @@
     right: 0;
     margin-right: 10px;
     margin-top: 10px;
-
+    background-image: url("../../images/favourites_unfilled.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    width: 23px;
+    height: 27px;
+    background-color: white;
+    cursor: pointer;
+    outline: none;
 }
 
 .card__tag{
-    font-family: 'Inter';
-    font-style: normal;
     font-weight: 400;
     font-size: 15px;
     line-height: 22px;
@@ -222,7 +125,6 @@
 
 .card__brand{
     margin: 0;
-    font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
@@ -230,7 +132,6 @@
 }
 
 .card__title{
-    font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -240,7 +141,6 @@
 
 .card__price{
     margin-bottom: 0;
-    font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 15px;
@@ -290,15 +190,4 @@
     display: flex;
     overflow: hidden;
 }
-.footer{
-    width: 80%;
-    border-top: 1px solid;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-}
 
-.footer__form{
-    width: 50%;
-    margin-top: 50px;
-}
