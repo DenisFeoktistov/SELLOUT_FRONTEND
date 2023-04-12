@@ -4,7 +4,8 @@ import cart from '../images/cart.svg';
 import account from '../images/account.svg';
 import logo from '../images/sellout_logo.svg';
 import search from '../images/search.svg';
-import express_shipping from '../images/express_shipping.svg'
+import express_shipping from '../images/express_shipping.svg';
+import menu_3stripes from '../images/menu_3stripes.svg'
 
 function Header() {
     const [menuClassName, setMenuClassName] = React.useState("");
@@ -14,12 +15,15 @@ function Header() {
         } else {
             setMenuClassName("")
         }
-        
+    }
+    function openSearch (){
+
     }
   return (
     <header className="header">
-    <div className="top">
-        <button type="button" className="header__button" src={account} alt="Личный кабинет" onClick={openMenu}></button>
+    <div className="header__top">
+        <button type="button" className="header__button" onClick={openMenu}></button>
+        <button type="button" className="header__searchButton" onClick={openSearch}></button>
         <div className={`menu ${menuClassName}`}>
             <p className="menu__element">О нас</p>
             <p className="menu__element">Блог</p>
@@ -32,7 +36,7 @@ function Header() {
             <img className="header__image header__image__cart" src={cart} alt="Корзина"/>
         </div>
     </div>
-    <div className="bottom">
+    <div className="header__bottom">
         <div className="menu">
             <p className="menu__element">Новинки</p>
             <p className="menu__element">Рекомендации</p>
