@@ -22,37 +22,37 @@ function Header() {
   return (
     <header className="header">
     <div className="header__top">
-        <button type="button" className="header__button" onClick={openMenu}></button>
-        <button type="button" className="header__searchButton" onClick={openSearch}></button>
-        <div className={`menu ${menuClassName}`}>
-            <p className="menu__element">О нас</p>
-            <p className="menu__element">Блог</p>
-            <p className="menu__element">Связаться с нами</p>
+        <button type="button" className="top__mobileMenuButton" onClick={openMenu}></button>
+        <button type="button" className="top__mobileSearchButton" onClick={openSearch}></button>
+        <div className={`top__top-menu ${menuClassName}`}>
+            <p className="top-menu__element">О нас</p>
+            <p className="top-menu__element">Блог</p>
+            <p className="top-menu__element">Связаться с нами</p>
         </div>
-        <img className="header__image__logo" src={logo} alt="SELLOUT"/>
-        <div className="personal">
-            <img className="header__image" src={account} alt="Личный кабинет"/>
-            <img className="header__image" src={favourites_unfilled} alt="Избранное"/>
-            <img className="header__image header__image__cart" src={cart} alt="Корзина"/>
+        <img className="top__image__logo" src={logo} alt="SELLOUT"/>
+        <div className="top__personal">
+            <img className="personal__image" src={account} alt="Личный кабинет"/>
+            <img className="personal__image" src={favourites_unfilled} alt="Избранное"/>
+            <img className="personal__image personal__image__cart" src={cart} alt="Корзина"/>
         </div>
     </div>
     <div className="header__bottom">
-        <div className="menu">
-            <p className="menu__element">Новинки</p>
-            <p className="menu__element">Рекомендации</p>
-            <p className="menu__element">Бренды</p>
-            <p className="menu__element">Обувь</p>
-            <p className="menu__element">Одежда</p>
-            <p className="menu__element">Аксессуары</p>
-            <div className="menu__element menu_shipping">
-                <p className="menu_shipping__p">Мгновенная доставка</p>
-                <img className="header__image_shipping" src={express_shipping} alt="Мгновенная доставка"/>
+        <div className="bottom__bottom-menu">
+            <p className="bottom-menu__element">Новинки</p>
+            <p className="bottom-menu__element">Рекомендации</p>
+            <p className="bottom-menu__element">Бренды</p>
+            <p className="bottom-menu__element">Обувь</p>
+            <p className="bottom-menu__element">Одежда</p>
+            <p className="bottom-menu__element">Аксессуары</p>
+            <div className="bottom-menu__element bottom-menu__shipping">
+                <p className="bottom-menu__shipping__p">Мгновенная доставка</p>
+                <img className="bottom-menu__shipping_image" src={express_shipping} alt="Мгновенная доставка"/>
             </div>
-            <p className="menu__element" style={{color: "red"}}>Скидки</p>
+            <p className="bottom-menu__element" style={{color: "red"}}>Скидки</p>
         </div>
-        <form className="header__form">
-            <input type="text" name="text" className="search" placeholder="Поиск"/>
-            <input type="image" name="submit" className="submit" src={search} alt="Кнопка поиска"/>
+        <form className="bottom__form">
+            <input type="text" name="text" className="form__search" placeholder="Поиск"/>
+            <input type="image" name="submit" className="form__submit__image" src={search} alt="Кнопка поиска"/>
         </form>
     </div>
     
