@@ -112,12 +112,14 @@
 @media screen and (max-width: 500px){
     .header__button{
         visibility: visible;
+        display: flex;
     }
     .menu{
         visibility: hidden;
     }
     .menu_visible{
         visibility: visible;
+        display: flex;
     }
 }
 

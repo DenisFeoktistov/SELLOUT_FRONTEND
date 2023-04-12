@@ -177,11 +177,9 @@ function App() {
   };
 
   return (
-    <CurrentUserContext.Provider value={currentUser}>
+    // <CurrentUserContext.Provider value={currentUser}>
       <div className="App">
         <div className="page">
-          {console.log(cards)}
-          {/* {console.log("here")}
           <Routes>
             <Route exact path="/">
               <MainComponent />
@@ -189,20 +187,20 @@ function App() {
             <Route path="/productPage">
               <ProductPage card={cards[2]} />
             </Route>
-          </Routes> */}
-          <Header/>
-          <ProductPage card={cards[1]}/>
-          <Basket/>
+          </Routes>
+          {/* <Header/>
+          {/* <ProductPage card={cards[1]}/> */}
+          {/* <Basket/> */}
           {/* {<Main cards={cards} onCardLike={handleCardLike} onCardDelete={handleCardDelete} onCardClick={handleCardClick} onEditProfile={handleEditProfileClick} onAddPlace={handleAddPlaceClick} onEditAvatar={handleEditAvatarClick} />} */}
-          <Recommendation cards={cards} onCardLike={handleCardLike} onCardDelete={handleCardDelete} onCardClick={handleCardClick} onEditProfile={handleEditProfileClick} onAddPlace={handleAddPlaceClick} onEditAvatar={handleEditAvatarClick}></Recommendation>
-          <Footer/>
+          {/* <Recommendation cards={cards} onCardLike={handleCardLike} onCardDelete={handleCardDelete} onCardClick={handleCardClick} onEditProfile={handleEditProfileClick} onAddPlace={handleAddPlaceClick} onEditAvatar={handleEditAvatarClick}></Recommendation>
+          <Footer/> */}
           {/* <EditProfilePopup onUpdateUser={handleUpdateUser} isOpen={isEditProfilePopupOpen} onClose={closeAllPopups} />
           <AddPlacePopup  onSubmit={handleAddPlaceSubmit} onClose={closeAllPopups} isOpen={isAddPlacePopupOpen}/>
           <EditAvatarPopup onUpdateAvatar={handleUpdateAvatar} onSubmit={handleUpdateAvatar} isOpen={isEditAvatarPopupOpen} onClose={closeAllPopups} />
           <PopupWithForm buttonText="Да" onClose={closeAllPopups} isOpen={false} title="Вы уверены?" name="delete-card" /> */}
         </div>
       </div>
-    </CurrentUserContext.Provider>
+    // </CurrentUserContext.Provider>
   );
 }
 
