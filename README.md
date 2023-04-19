@@ -1,3 +1,39 @@
+# Структура проекта
+
+```
+src
+└── assets // изображения, иконки и тп
+│
+├── components
+│   └── Component
+│       ├── index.js //public api
+│       ├── ui //здесь будет все что касается UI компонента
+│       │   ├── Component.js
+│       │   ├── Component.module.css //стили для компонента
+│       └── api //api использующееся только в компоненте Component
+│
+└── modules //нужны для группировки эементов чтоб составить потом страницу. Далее пример
+│   └── Home
+│       ├── api
+│       ├── ui
+│       │   ├── Home.js //страница со всей логикой
+│       │   └── Home.module.css //страница со всей логикой
+│       └── index.js //public api
+│
+└── pages //страницы лол
+│
+└── shared //элементы, использующиеся во многих частях проекта
+    ├── api
+    ├── context //React context
+    ├── store //сторы редакса
+    ├── lib //это папка со вспомогательными функциями (типа utils)
+    └── styles //глобальные стили
+```
+
+**Важный момент** - в pages не реализовывается никакая бизнес-логика. Для этого существуют modules. Получается, страницы нужны только для того чтобы получать данные с сервера с помощью `getServerSideProps`.
+
+---
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

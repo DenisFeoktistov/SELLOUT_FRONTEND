@@ -4,7 +4,7 @@ import { Route, Redirect, useHistory, Routes } from "react-router-dom";
 import api from "../utils/api.js";
 import Header from "./Header";
 import Main from "./Main";
-import Footer from "./Footer";
+import Footer from "../../../src/components/Footer/Footer.js";
 import Recommendation from "./Recommendations.js";
 import ProductPage from "./ProductPage.js";
 import Basket from "./Basket.js";
@@ -144,7 +144,7 @@ function App() {
     return (
       <>
         {/* <HeaderAside isOpen={isAsideOpened} closeClick={closeAllPopups} /> */}
-        <Header/>
+        <Header />
         <Main
           cards={cards}
           onCardLike={handleCardLike}
@@ -186,12 +186,20 @@ function App() {
               <ProductPage card={cards[2]} />
             </Route>
           </Routes> */}
-          <Header/>
-          <ProductPage card={cards[1]}/>
-          <Basket/>
+          <Header />
+          <ProductPage card={cards[1]} />
+          <Basket />
           {/*<Main cards={cards} onCardLike={handleCardLike} onCardDelete={handleCardDelete} onCardClick={handleCardClick} onEditProfile={handleEditProfileClick} onAddPlace={handleAddPlaceClick} onEditAvatar={handleEditAvatarClick} />*/}
-          <Recommendation cards={cards} onCardLike={handleCardLike} onCardDelete={handleCardDelete} onCardClick={handleCardClick} onEditProfile={handleEditProfileClick} onAddPlace={handleAddPlaceClick} onEditAvatar={handleEditAvatarClick}></Recommendation>
-          <Footer/>
+          <Recommendation
+            cards={cards}
+            onCardLike={handleCardLike}
+            onCardDelete={handleCardDelete}
+            onCardClick={handleCardClick}
+            onEditProfile={handleEditProfileClick}
+            onAddPlace={handleAddPlaceClick}
+            onEditAvatar={handleEditAvatarClick}
+          ></Recommendation>
+          <Footer />
           {/* <EditProfilePopup onUpdateUser={handleUpdateUser} isOpen={isEditProfilePopupOpen} onClose={closeAllPopups} />
           <AddPlacePopup  onSubmit={handleAddPlaceSubmit} onClose={closeAllPopups} isOpen={isAddPlacePopupOpen}/>
           <EditAvatarPopup onUpdateAvatar={handleUpdateAvatar} onSubmit={handleUpdateAvatar} isOpen={isEditAvatarPopupOpen} onClose={closeAllPopups} />

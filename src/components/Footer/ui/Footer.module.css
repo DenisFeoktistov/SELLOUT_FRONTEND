@@ -1,0 +1,140 @@
+.footer{
+    width: auto;
+    background-color: #000000;
+    color: white;
+    display: block;
+    padding: 0 200px 0 70px;
+}
+
+
+.footer__top, .footer__middle{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px 0;
+}
+
+.footer__title{
+    font-weight: bold;
+    padding-bottom: 20px;
+    font-size: larger;
+}
+
+.footer__top__sections{
+    display: grid;
+}
+
+.footer__top__one-section{
+    text-decoration: none;
+    transition: font-weight 0.3s ease;
+    padding-bottom: 15px;
+    font-weight: lighter;
+    color: white;
+}
+
+.footer__top__one-section:hover{
+    font-weight: bold;
+}
+
+.footer__top__one-section-nolink:hover{
+    font-weight: normal;
+}
+
+.footer__top__one-section:visited{
+    color: inherit;
+}
+
+.footer__middle__sections{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__middle__sections a img{
+    width: 40px;
+}
+
+.footer__middle__sections img:hover{
+    cursor: pointer;
+}
+
+.footer__middle__form{
+    display: flex;
+    align-items: center;
+}
+
+.footer__middle__form input, button {
+    font-size: 16px;
+}
+
+.footer__middle__form-input{
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    padding-right: 50px;
+}
+
+.footer__middle__form-input:focus {
+    outline: none;
+    border-color: rgb(192,192,192);
+    box-shadow: 0 0 5px rgb(192,192,192);
+}
+
+.footer__middle__form-input::placeholder{
+    font-family: "Montserrat", serif;
+    color: #999;
+    text-indent: 5px;
+}
+
+.footer__middle__form-submit{
+    padding: 10px;
+    margin-left: -35px;
+    background-color: black;
+    background-image: url("../../images/right_arrow.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.error-message {
+    display: block;
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.footer__bottom{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    margin-top: 70px;
+    padding: 30px 0 50px 0;
+    align-items: center;
+}
+
+.footer__bottom::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -70px;
+    right: -200px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    z-index: 1;
+}
+
+.footer__bottom__rights{
+    float: left;
+}
+
+.footer__bottom__docs a{
+    float: right;
+    font-size: smaller;
+    color: grey;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-left: 15px;
+}
