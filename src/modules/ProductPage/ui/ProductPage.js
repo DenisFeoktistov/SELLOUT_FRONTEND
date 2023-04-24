@@ -1,10 +1,10 @@
-import React from 'react'
-import {useState, useEffect} from 'react';
+import React from "react";
+import { useState, useEffect } from "react";
 import styles from "./ProductPage.module.css";
 
 function ProductPage(props) {
   let statusOpened = "";
-  console.log(props)
+  console.log(props);
 
   return (
     <section className="product">
@@ -22,16 +22,36 @@ function ProductPage(props) {
           <p className="product__tag">Tag</p>
           <p className="product__brand">Brand</p>
           <p className="product__title">Title</p>
-          <p className="product__price">Price<img className="card__extras__return" src="@assets/images/product_return.svg" alt="Доступен возврат"/>
-            <img className="card__extras__shipping" src="@assets/images/express_shipping.svg" alt="Мгновенная доставка"/></p>
+          <p className="product__price">
+            Price
+            <img
+              className="card__extras__return"
+              src="@assets/images/product_return.svg"
+              alt="Доступен возврат"
+            />
+            <img
+              className="card__extras__shipping"
+              src="@assets/images/express_shipping.svg"
+              alt="Мгновенная доставка"
+            />
+          </p>
           <a className="product__sizes">Размерная сетка</a>
           <div className="product__options">
             <select className="product__config" name="size">
-              <option className="config__option" value="Выбрать конфигурацию" selected disabled>
+              <option
+                className="config__option"
+                value="Выбрать конфигурацию"
+                selected
+                disabled
+              >
                 Выбрать конфигурацию
               </option>
-              <option className="config__option" value="10US">10US</option>
-              <option className="config__option" value="11US">11US</option>
+              <option className="config__option" value="10US">
+                10US
+              </option>
+              <option className="config__option" value="11US">
+                11US
+              </option>
             </select>
             <button className="product__fastDeliver button">
               Быстрая до 10 дней
@@ -63,7 +83,6 @@ function ProductPage(props) {
           Описание продукта Описание продукта Описание продукта Описание
           продукта Описание продукта Описание продукта
         </p>
-        
       </div>
       <div className="product__id">
         <h2 className="id__title">Product IDs</h2>
