@@ -1,11 +1,13 @@
 import React from "react";
 import api from "../utils/api.js";
 import Card from "./Card";
+import { cartActions } from "@/shared/store";
 
 import { CurrentUserContext } from "../contexts/CurrentUserContext";
 
 function Cart(props) {
   const currentUser = React.useContext(CurrentUserContext);
+
   //console.log(currentUser)
 
   const [statusVisible, changeStatus] = React.useState("");
