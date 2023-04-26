@@ -1,6 +1,6 @@
 import React from "react";
 import api from "../utils/api.js";
-import Card from "./Card";
+import Card from "./Card.js";
 import { cartActions } from "@/shared/store";
 
 import { CurrentUserContext } from "../contexts/CurrentUserContext";
