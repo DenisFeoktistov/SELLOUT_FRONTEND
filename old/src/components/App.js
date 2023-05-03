@@ -4,7 +4,7 @@ import { Route, Redirect, useHistory, Routes } from "react-router-dom";
 import api from "../utils/api.js";
 import Header from "./Header";
 import Main from "./Main";
-import Footer from "../../../src/components/Footer/Footer.js";
+import Footer from "./Footer.js";
 import Recommendation from "./Recommendations.js";
 import ProductPage from "./ProductPage.js";
 import Basket from "./Basket.js";
