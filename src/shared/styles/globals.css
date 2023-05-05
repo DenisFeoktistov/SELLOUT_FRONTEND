@@ -1,9 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
+* {
+    box-sizing: border-box;
+}
+
+
 a {
     text-decoration: none;
     color: #000;
 }
+
+button {
+    outline: none;
+    background: none;
+    border: none;
+}
+
 
 
 html,body {
@@ -12,4 +24,5 @@ html,body {
 
 body{
     padding-top: 125px;
+    width: 100%;
 }

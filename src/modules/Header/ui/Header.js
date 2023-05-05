@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import cart from "@/assets/images/cart.svg";
 import fav_outline from "@/assets/images/favourites_unfilled.svg";
 import account from "@/assets/images/account.svg";
@@ -10,8 +10,25 @@ import menu_3stripes from "@/assets/images/menu_3stripes.svg";
 import styles from "./Header.module.css";
 import Link from "next/link";
 import Image from "next/image";
+import { AuthModalContext, UserContext } from "@/shared/contexts";
+import { useRouter } from "next/router";
 
 function Header() {
+  const { open, setCallbackUrl } = useContext(AuthModalContext);
+  const { user } = useContext(UserContext);
+  const router = useRouter();
+
+  const onHeaderButtonClicked = (route) => {
+    //проверка авторизированного пользователя
+    if (!user) {
+      open();
+      setCallbackUrl(route);
+      return;
+    }
+
+    router.push(route);
+  };
+
   return (
     <header className={styles.header}>
       <div className={styles.header__aside}></div>
@@ -30,13 +47,13 @@ function Header() {
         </div>
         <Image className={styles.top__image__logo} src={logo} alt="SELLOUT" />
         <div className={styles.top__personal}>
-          <a href="#">
+          <button onClick={() => onHeaderButtonClicked("/profile")}>
             <Image
               className={styles.personal__image}
               src={account}
               alt="Личный кабинет"
             />
-          </a>
+          </button>
           <a href="#">
             <Image
               className={styles.personal__image}

@@ -112,6 +112,7 @@
   border-radius: 4px;
   margin-left: 40px;
   justify-content: end;
+  box-sizing: content-box;
 }
 
 .personal__image:hover {

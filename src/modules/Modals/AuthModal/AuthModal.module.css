@@ -1,0 +1,17 @@
+
+.auth__with {
+    text-align: center;
+    padding-top: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.fp__container {
+    text-align: center;
+    padding-top: 16px;
+}
+
+.forgot__password {
+    font-size: 16px;
+    color: #727272;
+}
