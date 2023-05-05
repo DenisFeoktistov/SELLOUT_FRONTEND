@@ -1,0 +1,30 @@
+.image__wrap {
+    min-width: fit-content;
+    display: flex;
+    align-items: center;
+    height: fit-content;
+}
+  
+.image__slide {
+    padding: 20px 8px;
+    background-color: transparent;
+    border: none;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+  
+.image__slide_previous {
+    background-image: url("@assets/images/slidePrev.png");
+    left: 0px;
+}
+  
+.image__slide_next {
+    background-image: url("@assets/images/slideNext.png");
+    right: 0;
+}
+  
+.image__slide:hover {
+    cursor: pointer;
+    opacity: 0.3;
+    transition: opacity 0.5s ease;
+}

@@ -80,7 +80,6 @@ function ProductInfoSection(props) {
           </div>
         </div>
       </div>
-
       <div className={styles.product__bottom}>
         <div className={styles.product__path}>
           <a className={styles.product__point}>Men's</a>
