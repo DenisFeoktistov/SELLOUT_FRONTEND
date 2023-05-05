@@ -58,17 +58,14 @@
     cursor: pointer;
 }
 
-.footer__middle__form{
+.footer__middle__form {
     display: flex;
     align-items: center;
     width: 50%;
 }
 
-.footer__middle__form input, button {
-    font-size: 16px;
-}
-
 .footer__middle__form-input{
+    font-size: 16px;
     padding: 10px;
     border: 2px solid #ccc;
     border-radius: 4px;
@@ -91,10 +88,11 @@
 }
 
 .footer__middle__form-submit{
+    font-size: 16px;
     padding: 10px;
     margin-left: -35px;
     background-color: black;
-    background-image: url("../../images/right_arrow.svg");
+    /* background-image: url("../../images/right_arrow.svg"); */
     background-size: contain;
     background-repeat: no-repeat;
     border: none;

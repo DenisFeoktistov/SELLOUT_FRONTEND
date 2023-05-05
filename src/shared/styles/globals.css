@@ -6,6 +6,10 @@ a {
 }
 
 
+html,body {
+    font-family: "Montserrat", serif;
+}
+
 body{
     padding-top: 125px;
 }

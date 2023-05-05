@@ -1,3 +1,4 @@
+import { Footer } from "@/modules/Footer";
 import { Header } from "@/modules/Header";
 import React from "react";
 
@@ -6,6 +7,7 @@ const MainLayout = ({ children }) => {
     <>
       <Header />
       {children}
+      <Footer />
     </>
   );
 };

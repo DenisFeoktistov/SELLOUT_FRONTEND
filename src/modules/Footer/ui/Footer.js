@@ -1,5 +1,8 @@
 import React, { useState } from "react";
-import telegramLogo from "../images/telegram.svg";
+import telegramLogo from "@/assets/images/telegram.svg";
+
+import styles from "./Footer.module.css";
+import Image from "next/image";
 
 function Footer() {
   const [email, setEmail] = useState("");
@@ -82,9 +85,7 @@ function Footer() {
               FAQ
             </a>
             <div
-              className={`${styles.footer__top__one - section} ${
-                styles.footer__top__one - section - nolink
-              }`}
+              className={`${styles[".footer__top__one-section"]} ${styles["footer__top__one-section-nolink"]}`}
             >
               Или свяжитесь с нами:
             </div>
@@ -108,13 +109,13 @@ function Footer() {
           <div className={styles.footer__title}>Мы в социальных сетях:</div>
           <div className={styles.footer__middle__sections}>
             <a href="https://t.me/markermann">
-              <Image src="" />
+              <Image src={telegramLogo} height={40} />
             </a>
             <a href="https://t.me/markermann">
-              <Image src="" />
+              <Image src={telegramLogo} height={40} />
             </a>
             <a href="https://t.me/markermann">
-              <Image src="" />
+              <Image src={telegramLogo} height={40} />
             </a>
           </div>
         </div>
