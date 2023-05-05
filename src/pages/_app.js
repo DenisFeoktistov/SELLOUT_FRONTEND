@@ -10,7 +10,7 @@ import { Provider } from "react-redux";
 
 export default function App({ Component, pageProps }) {
   //состояние модалки авторизации
-  const [opened, { open, close }] = useDisclosure(true);
+  const [opened, { open, close }] = useDisclosure(false);
 
   //ссылка для редиректа после авторизации
   const [callbackUrl, setCallbackUrl] = useState();
