@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import styles from "./ProductInfoSection.module.css";
+import { ProductInfoGallery } from "@components/ProductInfoGallery";
 
 function ProductInfoSection(props) {
   let statusOpened = "";
@@ -9,19 +10,7 @@ function ProductInfoSection(props) {
   return (
     <section className={styles.product}>
       <div className={styles.product__wrap}>
-        <div className={styles.image__wrap}>
-          <button
-            className={`${styles["image__slide"]} ${styles["image__slide_previous"]}`}
-          ></button>
-          <Image
-            className={styles.product__image}
-            alt="Name"
-            src="https://images.unsplash.com/photo-1621348283934-1970ce077ff7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1172&q=80"
-          />
-          <button
-            className={`${styles["image__slide"]} ${styles["image__slide_next"]}`}
-          ></button>
-        </div>
+        <ProductInfoGallery />
         <div className={styles.product__info}>
           <p className={styles.product__tag}>Tag</p>
           <p className={styles.product__brand}>Brand</p>
