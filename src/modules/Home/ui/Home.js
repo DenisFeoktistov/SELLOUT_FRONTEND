@@ -1,5 +1,5 @@
 import React from "react";
-import { MainLayout } from "@/modules/MainLayout";
+import { MainLayout } from "@/shared/layouts/MainLayout";
 
 function Home() {
   return <div></div>;
