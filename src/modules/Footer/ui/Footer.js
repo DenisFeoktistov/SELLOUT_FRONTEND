@@ -85,7 +85,7 @@ function Footer() {
               FAQ
             </a>
             <div
-              className={`${styles[".footer__top__one-section"]} ${styles["footer__top__one-section-nolink"]}`}
+              className={`${styles["footer__top__one-section"]} ${styles["footer__top__one-section-nolink"]}`}
             >
               Или свяжитесь с нами:
             </div>
