@@ -34,6 +34,8 @@ src
 
 ## **Вспомогательная UI-библиотека** - Mantine: https://mantine.dev/pages/getting-started/
 
+## **Верстка здесь** - https://github.com/jestersj/sellout
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
