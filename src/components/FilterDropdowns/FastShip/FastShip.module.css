@@ -1,0 +1,16 @@
+.text {
+    margin: 0 5px;
+    display: flex;
+    font-weight: 700;
+    user-select: none;
+}
+.icon {
+    margin-left: 5px;
+}
+.sale {
+    width: 240px;
+    transition: 0.3s;
+}
+.sale:hover {
+    background: rgba(0, 0, 0, 0.05);
+}

@@ -1,28 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
-* {
-    box-sizing: border-box;
-}
-
-
-a {
-    text-decoration: none;
-    color: #000;
-}
-
-button {
-    outline: none;
-    background: none;
-    border: none;
-}
-
-
-
 html,body {
     font-family: "Montserrat", serif;
 }
 
-body{
-    padding-top: 125px;
-    width: 100%;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+.slider {
+    margin-top: 15px;
+    width: 260px;
+    height: 4px;
+    background: #cbcbcb;
+    border-radius: 7px;
+}
+.slider .thumb {
+    width: 20px;
+    height: 20px;
+    cursor: grab;
+    background: #ffffff;
+    border: 2px solid #cbcbcb;
+    outline: none;
+    border-radius: 50px;
+    top: -7px;
+}
+
+
+/* Стили из модулей, на которые ругается некст */
+
+label {
+    color: #222222;
+}
+
+input::placeholder {
+    font-style: italic;
+    font-size: 14px;
 }

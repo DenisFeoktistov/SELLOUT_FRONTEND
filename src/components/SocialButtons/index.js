@@ -1,5 +1,5 @@
-import AppleButton from "./AppleButton";
-import GoogleButton from "./GoogleButton";
-import VkButton from "./VkButton";
+import AppleButton from "./ui/AppleButton";
+import GoogleButton from "./ui/GoogleButton";
+import VkButton from "./ui/VkButton";
 
 export { AppleButton, GoogleButton, VkButton };

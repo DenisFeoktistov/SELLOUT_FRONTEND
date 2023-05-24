@@ -1,8 +1,7 @@
 import { AuthModal } from "@/modules/Modals";
 import { AuthModalContext, UserContext } from "@/shared/contexts";
 import store from "@/shared/store";
-import "@/shared/styles/globals.css";
-import "@/shared/styles/normalize.css";
+import "bootstrap/dist/css/bootstrap.css";
 import { MantineProvider, Modal } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { useState } from "react";

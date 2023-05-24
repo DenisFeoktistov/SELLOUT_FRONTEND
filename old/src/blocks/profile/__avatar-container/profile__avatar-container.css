@@ -1,7 +1,0 @@
-.profile__avatar-container{
-    display: grid;
-    grid-template-columns: 1fr;
-    position: relative;
-    width: 120px;
-}
-
