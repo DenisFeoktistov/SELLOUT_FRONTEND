@@ -4,10 +4,11 @@ import FilterDropdowns from "@/components/FilterDropdowns/FilterDropdowns";
 import { FiltersBlock } from "@/components/FiltersBlock";
 import { ProductList } from "@/components/ProductList";
 import { SortDropdown } from "@/components/SortDropdown";
+import { getProducts } from "@/shared/api/products";
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 
-const ProductsPage = () => {
+const ProductsPage = ({ products }) => {
   return (
     <Container>
       <BigPicture />
@@ -25,11 +26,21 @@ const ProductsPage = () => {
           <FilterDropdowns />
         </Col>
         <Col lg={9}>
-          <ProductList />
+          <ProductList products={products} />
         </Col>
       </Row>
     </Container>
   );
+};
+
+export const getServerSideProps = async () => {
+  const products = await getProducts();
+
+  return {
+    props: {
+      products,
+    },
+  };
 };
 
 export default ProductsPage;

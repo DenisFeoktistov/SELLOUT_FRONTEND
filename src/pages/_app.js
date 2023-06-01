@@ -6,6 +6,7 @@ import { MantineProvider, Modal } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import { useState } from "react";
 import { Provider } from "react-redux";
+import { SSRProvider } from "react-bootstrap";
 
 export default function App({ Component, pageProps }) {
   //состояние модалки авторизации
@@ -17,44 +18,46 @@ export default function App({ Component, pageProps }) {
   const [user, setUser] = useState(null);
 
   return (
-    <UserContext.Provider value={{ user, setUser }}>
-      <AuthModalContext.Provider
-        value={{ open, close, opened, callbackUrl, setCallbackUrl }}
-      >
-        <MantineProvider
-          theme={{
-            fontFamily: "Montserrat, serif",
-            colors: {
-              black: [
-                "#000000",
-                "#000000",
-                "#000000",
-                "#000000",
-                "#000000",
-                "#000000",
-                "#000000",
-                "#000000",
-                "#000000",
-                "#000000",
-              ],
-            },
-          }}
+    <SSRProvider>
+      <UserContext.Provider value={{ user, setUser }}>
+        <AuthModalContext.Provider
+          value={{ open, close, opened, callbackUrl, setCallbackUrl }}
         >
-          <Provider store={store}>
-            <Component {...pageProps} />
-            <Modal
-              radius={"lg"}
-              w={"100vw"}
-              size={"md"}
-              opened={opened}
-              onClose={close}
-              centered
-            >
-              <AuthModal />
-            </Modal>
-          </Provider>
-        </MantineProvider>
-      </AuthModalContext.Provider>
-    </UserContext.Provider>
+          <MantineProvider
+            theme={{
+              fontFamily: "Montserrat, serif",
+              colors: {
+                black: [
+                  "#000000",
+                  "#000000",
+                  "#000000",
+                  "#000000",
+                  "#000000",
+                  "#000000",
+                  "#000000",
+                  "#000000",
+                  "#000000",
+                  "#000000",
+                ],
+              },
+            }}
+          >
+            <Provider store={store}>
+              <Component {...pageProps} />
+              <Modal
+                radius={"lg"}
+                w={"100vw"}
+                size={"md"}
+                opened={opened}
+                onClose={close}
+                centered
+              >
+                <AuthModal />
+              </Modal>
+            </Provider>
+          </MantineProvider>
+        </AuthModalContext.Provider>
+      </UserContext.Provider>
+    </SSRProvider>
   );
 }
