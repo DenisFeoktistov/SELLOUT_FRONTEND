@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import telegramLogo from "@/assets/images/telegram.svg";
+import telegramLogo from "@/static/images/telegram.svg";
 
 import styles from "./Footer.module.css";
 import Image from "next/image";

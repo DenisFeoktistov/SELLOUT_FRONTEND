@@ -1,0 +1,35 @@
+.header {
+    background: white;
+    padding: 10px 0;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    z-index: 10;
+}
+.row1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.block {
+    display: flex;
+    align-items: center;
+}
+.links {
+    text-decoration: none;
+    cursor: pointer;
+    margin: 0 10px;
+}
+.logo {
+    font-size: 40px;
+    transform: translateX(-25%);
+    user-select: none;
+}
+.icons {
+    width: 30px;
+    margin: 0 15px;
+    cursor: pointer;
+}
+.truck {
+    margin-left: 5px;
+}

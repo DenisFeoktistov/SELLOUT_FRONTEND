@@ -5,8 +5,9 @@
     color: #b61212;
 }
 .sale {
-    width: 220px;
+    width: 280px;
     transition: 0.3s;
+    padding: 7px 0;
 }
 .sale:hover {
     background: rgba(0, 0, 0, 0.05);

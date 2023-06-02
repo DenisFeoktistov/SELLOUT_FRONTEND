@@ -1,54 +1,26 @@
 import React, { useState } from "react";
-import s from "./ProductCard.module.css";
-import shoe from "@/static/img/shoe.png";
-import like from "@/static/icons/heart.svg";
-import truck from "@/static/icons/truck.svg";
-import re from "@/static/icons/arrow-return-left.svg";
-import Image from "next/image";
+import s from "./AdminCard.module.css";
+import truck from "../../static/icons/truck.svg";
+import re from "../../static/icons/arrow-return-left.svg";
+import like from "../../static/icons/heart.svg";
+import shoe from "../../static/img/shoe.png";
+import { Carousel } from "react-bootstrap";
+import { ScrollableBDropdown } from "@/shared/ui";
 
-const ProductCard = ({
-  isAdmin = false,
-  russian_name,
-  tags = [],
-  brands = [],
-  categories = [],
-}) => {
+const AdminCard = () => {
   const [tag, setTag] = useState("Tag");
   const [name, setName] = useState("Name");
   const [price, setPrice] = useState("300$");
-
-  if (!isAdmin) {
-    return (
-      <div className={s.card}>
-        <div className={s.icons_block}>
-          <div style={{ display: "flex" }}>
-            <div className={s.sale}>-20%</div>
-            <Image src={truck} alt="shippment" className={s.truck} />
-            <Image src={re} alt="shippment" className={s.truck} />
-          </div>
-          <Image src={like} alt="like" className={s.like} />
-        </div>
-        <Image className={s.img} src={shoe} alt="shoe" />
-        <div className={s.text_block}>
-          <div className={s.tag}>{categories.map((c, i) => c.name)}</div>
-          <div className={s.brand}>{brands.map((b, i) => b.name + " ")}</div>
-          <div className={s.name}>{russian_name}</div>
-          <div className={s.price}></div>
-        </div>
-      </div>
-    );
-  }
-
   return (
     <div className={s.card}>
       <div className={s.icons_block}>
         <div style={{ display: "flex" }}>
           <div className={s.sale}>-20%</div>
-          <Image src={truck} alt="shippment" className={s.truck} />
-          <Image src={re} alt="shippment" className={s.truck} />
+          <img src={truck} alt="shippment" className={s.truck} />
+          <img src={re} alt="shippment" className={s.truck} />
         </div>
         <div className="d-flex align-items-center">
-          <Image src={like} alt="like" className={s.like} />
+          <img src={like} alt="like" className={s.like} />
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="16"
@@ -64,10 +36,10 @@ const ProductCard = ({
       </div>
       <Carousel variant="dark" indicators={false} interval={null}>
         <Carousel.Item>
-          <Image className={s.img} src={shoe} alt="shoe" />
+          <img className={s.img} src={shoe} alt="shoe" />
         </Carousel.Item>
         <Carousel.Item>
-          <Image className={s.img} src={shoe} alt="shoe" />
+          <img className={s.img} src={shoe} alt="shoe" />
         </Carousel.Item>
       </Carousel>
       <div className="d-flex justify-content-center">
@@ -114,4 +86,4 @@ const ProductCard = ({
   );
 };
 
-export default ProductCard;
+export default AdminCard;

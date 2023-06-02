@@ -1,11 +1,11 @@
 import React, { useContext } from "react";
-import cart from "@/assets/images/cart.svg";
-import fav_outline from "@/assets/images/favourites_unfilled.svg";
-import account from "@/assets/images/account.svg";
-import logo from "@/assets/images/sellout_logo.svg";
-import search from "@/assets/images/search.svg";
-import express_shipping from "@/assets/images/express_shipping.svg";
-import menu_3stripes from "@/assets/images/menu_3stripes.svg";
+import cart from "@/static/images/cart.svg";
+import fav_outline from "@/static/images/favourites_unfilled.svg";
+import account from "@/static/images/account.svg";
+import logo from "@/static/images/sellout_logo.svg";
+import search from "@/static/images/search.svg";
+import express_shipping from "@/static/images/express_shipping.svg";
+import menu_3stripes from "@/static/images/menu_3stripes.svg";
 
 import styles from "./Header.module.css";
 import Link from "next/link";

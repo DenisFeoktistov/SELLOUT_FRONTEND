@@ -1,6 +1,6 @@
 import React from "react";
 import s from "./Sale.module.css";
-import { CustomCheckbox } from "@/shared/ui";
+import { CustomCheckbox, SearchInput, Arrow, RangeSlider } from "@/shared/ui";
 
 const Sale = () => {
   return (

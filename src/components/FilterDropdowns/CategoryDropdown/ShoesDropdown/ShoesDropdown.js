@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import s from "./ShoesDropdown.module.css";
-import { CustomCheckbox } from "@/shared/ui";
+import { CustomCheckbox, SearchInput, Arrow } from "@/shared/ui";
 
 const ShoesDropdown = () => {
   const categories = ["Adidas", "Nike", "New Balance"];
@@ -23,7 +23,10 @@ const ShoesDropdown = () => {
         }
       >
         <div onClick={() => toggleDropdown()} className={s.dropdown_toggle}>
-          <div className={s.dropdown_toggle_text}>Обувь</div>
+          <div className={s.dropdown_toggle_text}>
+            Обувь
+            <Arrow isOpen={isOpen} />
+          </div>
         </div>
       </div>
       {isOpen && (

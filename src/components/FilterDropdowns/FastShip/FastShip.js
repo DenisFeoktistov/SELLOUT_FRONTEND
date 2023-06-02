@@ -1,7 +1,7 @@
 import React from "react";
-import icon from "@/assets/icons/truck.svg";
+import icon from "../../../static/icons/truck.svg";
 import s from "./FastShip.module.css";
-import { CustomCheckbox } from "@/shared/ui";
+import { CustomCheckbox, SearchInput, Arrow } from "@/shared/ui";
 
 const FastShip = () => {
   return (

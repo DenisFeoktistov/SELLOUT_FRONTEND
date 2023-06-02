@@ -228,7 +228,7 @@
   padding: 10px;
   border: none;
   background: white;
-  background-image: url("../../../assets/images/search.svg");
+  background-image: url("../../../static/images/search.svg");
   background-size: contain;
   cursor: pointer;
   background-repeat: no-repeat;
@@ -236,7 +236,7 @@
 
 .top__mobileMenuButton {
   display: none;
-  background-image: url("../../../assets/images/menu.png");
+  background-image: url("../../../static/images/menu.png");
   padding: 12.5px;
   background-color: transparent;
   border: none;

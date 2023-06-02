@@ -8,8 +8,9 @@
     margin-left: 5px;
 }
 .sale {
-    width: 240px;
+    width: 280px;
     transition: 0.3s;
+    padding: 7px 0;
 }
 .sale:hover {
     background: rgba(0, 0, 0, 0.05);

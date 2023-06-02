@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import s from "./ColorDropdown.module.css";
-import { CustomCheckbox } from "@/shared/ui";
+import { CustomCheckbox, SearchInput, Arrow } from "@/shared/ui";
 
 const ColorDropdown = () => {
   const gender = ["Красный", "Красный", "Красный"];
@@ -18,7 +18,10 @@ const ColorDropdown = () => {
         }
       >
         <div onClick={() => toggleDropdown()} className={s.dropdown_toggle}>
-          <div className={s.dropdown_toggle_text}>Цвет</div>
+          <div className={s.dropdown_toggle_text}>
+            Цвет
+            <Arrow isOpen={isOpen} />
+          </div>
         </div>
       </div>
       {isOpen && (

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import s from "./PriceDropdown.module.css";
-import { RangeSlider } from "@/shared/ui";
+import { CustomCheckbox, SearchInput, Arrow, RangeSlider } from "@/shared/ui";
 
 const ColorDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +16,10 @@ const ColorDropdown = () => {
         }
       >
         <div onClick={() => toggleDropdown()} className={s.dropdown_toggle}>
-          <div className={s.dropdown_toggle_text}>Цена</div>
+          <div className={s.dropdown_toggle_text}>
+            Цена
+            <Arrow isOpen={isOpen} />
+          </div>
         </div>
       </div>
       {isOpen && (

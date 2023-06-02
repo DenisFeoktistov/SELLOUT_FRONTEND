@@ -1,5 +1,5 @@
 .dropdown {
-    width: 220px;
+    width: 280px;
     user-select: none;
     color: #222222;
     background: transparent;
@@ -10,6 +10,8 @@
 }
 .dropdown_toggle_text {
     margin: 5px 5px 5px 20px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .hr {
@@ -18,12 +20,13 @@
 }
 .dropdown_items_block {
     background: white;
-    width: 220px;
+    width: 280px;
 }
 .dropdown_item {
     cursor: pointer;
     background: white;
     transition: 0.3s;
+    width: 280px;
 }
 .dropdown_item:hover {
     background: rgba(0, 0, 0, 0.05);
